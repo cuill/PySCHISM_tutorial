@@ -1,0 +1,14 @@
+data/
+build/
+dist/
+*.egg*
+__pycache__
+*_env
+.ipynb_checkpoints
+.vscode
+*.swp
+*.nc
+*.gr3
+*.ll
+.idea
+*.nfs*
