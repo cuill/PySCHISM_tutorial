@@ -1,4 +1,4 @@
-data/
+data/*
 build/
 dist/
 *.egg*
@@ -11,4 +11,5 @@ __pycache__
 *.gr3
 *.ll
 .idea
+*.log
 *.nfs*
