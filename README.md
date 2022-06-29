@@ -22,4 +22,7 @@
 ## Generate input files
     git clone https://github.com/cuill/PySCHISM_tutorial.git
     cd PySCHISM_tutorial
-    wget -O data/ http://ccrm.vims.edu/yinglong/Cui/PySCHISM_tutorial/hgrid.gr3
+### Download grid files
+    mkdir data
+    wget -O data/hgrid.gr3 http://ccrm.vims.edu/yinglong/Cui/PySCHISM_tutorial/hgrid.gr3
+    wget -O data/vgrid.in http://ccrm.vims.edu/yinglong/Cui/PySCHISM_tutorial/vgrid.in
