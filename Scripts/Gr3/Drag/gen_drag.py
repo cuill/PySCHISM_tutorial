@@ -16,7 +16,7 @@ if __name__ == '__main__':
 
     regions=['GoME+0.001.reg', 'Lake_Charles_0.reg']
     values=[0.001, 0.0]
-    flags=[1, 0]
+    flags=[1, 0] # 1: set, 0: add
     for reg, value, flag in zip(regions, values, flags):
         fgrid.modify_by_region(hgrid, f'./{reg}', value, depth1, flag)
 

@@ -6,7 +6,7 @@ if __name__ == '__main__':
 
     grd = hgrid.copy()
 
-    gr3_names = ['albedo', 'diffmax', 'diffmin', 'watertype', 'windrot']
+    gr3_names = ['albedo', 'diffmax', 'diffmin', 'watertype', 'windrot_geo2proj']
     values = [0.1, 1.0, 1e-6, 1.0, 0.0]
 
     for name, value in zip(gr3_names, values):
