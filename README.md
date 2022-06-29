@@ -17,6 +17,7 @@
     pip install .
 
 ### Optional (replace cfgrib pip version with conda version)
+    pip uninstall cfgrib
     conda install -c conda-forge cfgrib
 
 ## Generate input files
