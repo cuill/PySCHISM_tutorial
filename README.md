@@ -1,10 +1,7 @@
 # PySCHISM_tutorial
 
-## Install mamba
-    https://mamba.readthedocs.io/en/latest/installation.html
-
 ## Create a Python environment
-    mamba create -n pyschism_tutorial python=3.9
+    conda create -n pyschism_tutorial python=3.9
 
 ## Install pyschism package
 ### From PyPI using pip
