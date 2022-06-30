@@ -15,7 +15,7 @@ if __name__ == "__main__":
     )
     logging.getLogger("pyschism").setLevel(logging.DEBUG)
 
-    startdate = datetime(2022, 4, 1)
+    startdate = datetime(2022, 4, 4)
     print(startdate)
     rnday = 10
     hgrid = Hgrid.open("../../data/hgrid.gr3", crs="epsg:4326")
