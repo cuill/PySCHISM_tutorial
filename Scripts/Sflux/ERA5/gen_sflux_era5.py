@@ -21,9 +21,7 @@ if __name__ == '__main__':
 
     t0=time()
 
-    cache = './'
-
-    er=ERA5(cache=cache)
+    er=ERA5()
 
     er.write(outdir=outdir, start_date=startdate, rnday=rnday, air=True, \
         rad=True, prc=True, bbox=bbox, output_interval=interval, overwrite=True)
