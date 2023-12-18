@@ -4,17 +4,30 @@ import logging
 from pyschism.mesh.hgrid import Hgrid
 from pyschism.forcing.hycom.hycom2schism import OpenBoundaryInventory
 
-logging.basicConfig(level=logging.INFO, force=True)
+'''
+outputs:
+    elev2D.th.nc (elev=True)
+    SAL_3D.th.nc (TS=True)
+    TEM_3D.th.nc (TS=True)
+    uv3D.th.nc   (UV=True)
+'''
+
+logging.basicConfig(
+    format="[%(asctime)s] %(name)s %(levelname)s: %(message)s",
+    force=True,
+)
+logger = logging.getLogger('pyschism')
+logger.setLevel(logging.INFO)
 
 if __name__ == "__main__":
     hgrid=Hgrid.open('../../data/hgrid.gr3', crs='epsg:4326')
-    print(hgrid.bbox)
     vgrid='../../data/vgrid.in'
     outdir='./'
-    start_date=datetime(2022, 4, 1)
-    rnday=10
-    lats=[0, 27, 28, 32, 33, 90] 
-    msl_shifts=[-0.25, -0.25, 0.0, 0.0, 0.56, 0.56]
+    start_date=datetime(2018, 8, 1)
+    rnday=20
 
+    #boundary
     bnd=OpenBoundaryInventory(hgrid, vgrid)
-    bnd.fetch_data(outdir, start_date, rnday, elev2D=True, TS=True, UV=True, adjust2D=True, lats=lats, msl_shifts=msl_shifts)
+
+    #ocean_bnd_ids - segment indices, starting from zero.
+    bnd.fetch_data(outdir, start_date, rnday, elev2D=True, TS=True, UV=True, ocean_bnd_ids=[0])
